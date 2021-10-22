@@ -8,11 +8,11 @@ function App() {
 
   const showCartHandler = () => setCartIsShown(true);
 
-  const hideCardHandler = () => setCartIsShown(false);
+  const hideCartHandler = () => setCartIsShown(false);
 
   return (
     <React.Fragment>
-      {cartIsShown && <Cart />}
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
